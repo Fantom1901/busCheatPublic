@@ -35,7 +35,7 @@ header {
     .timer-display {
       color: white;
       font-size: 22px;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 
@@ -56,7 +56,7 @@ header {
       padding: 0;
       .number-text {
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
         color: #e21a1a;
         margin-left: 6px;
       }
@@ -65,7 +65,7 @@ header {
   .main-header-control {
     .control-text {
       font-size: 16px;
-      font-weight: 100;
+      font-weight: 400;
     }
   }
 }
