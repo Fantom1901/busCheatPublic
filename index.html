@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport"
+  >
+  <meta
+    content="ie=edge"
+    http-equiv="X-UA-Compatible"
+  >
+  <title>Городской транспорт</title>
+  <link rel="stylesheet" crossorigin href="/busCheatPublic/assets/index-DdUCGSo9.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="main-header-timer col-12 d-flex align-content-center justify-content-center">
+          <span
+            class="timer-display"
+            id="timer-display"
+          >Нажмите "закрыть" для запуска</span>
+      </div>
+      <div class="main-header-number col-5">
+        <div class="container-fluid d-flex justify-content-center align-content-center p-0">
+          <div class="row">
+            <div class="col-auto p-0 d-flex justify-content-around align-content-center">
+              <div class="image-container">
+                <img
+                  alt="Билет"
+                  class="main-image"
+                  src="/busCheatPublic/assets/ticket-Cq4mi5CK.jpg"
+                >
+              </div>
+            </div>
+            <div class="number-text-container col-auto d-flex align-content-center">
+              <b
+                class="p-0 number-text"
+                id="codeDisplay"
+              ></b>
+            </div>
+            <div class="container-fluid m-0 red-line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main-header-control col-5">
+        <div class="container-fluid">
+          <div class="row d-flex align-content-center justify-content-center">
+            <div class="col-auto p-0">
+              <div class="image-container">
+                <img
+                  alt="Человек в форме"
+                  class="main-image"
+                  src="/busCheatPublic/assets/person-BHMDmXGu.jpg"
+                >
+              </div>
+            </div>
+            <div class="col-auto d-flex align-content-center">
+              <b class="control-text">
+                Контроль
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="col-12 m-0">
+</header>
+
+<main class="container content-wrapper">
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="Человек в форме"
+          class="main-image"
+          src="/busCheatPublic/assets/person-BHMDmXGu.jpg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container">
+          <div class="row">
+            <b class="col-12 p-0 upper-text">Перевозчик</b>
+            <input
+              class="col-12 p-0 input-text"
+              value="КТАТП-5"
+              placeholder="КПАТП-5"
+              type="text"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="Автобус"
+          class="main-image"
+          src="/busCheatPublic/assets/auto-CKy7hJfY.jpg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <label class="p-0">
+              <select
+                class="col-12 select-text"
+                id="route"
+                name="route"
+              >
+                <option value="">Выберите маршрут</option>
+                <option value="sol-zor">мкрн. Солнечный - мкрн. Тихие зори</option>
+                <option value="zor-sol">мкрн. Тихие зори - мкрн. Солнечный</option>
+                <option value="mol-sol">Молодежная - Солнечный</option>
+                <option value="sol-mol">Солнечный - Молодежная</option>
+                <option value="akdbiat-LDK">Академия биатлона - ЛДК</option>
+                <option value="LDK-akdbiat">ЛДК - Академия биатлона</option>
+              </select>
+              <input
+                class="col-12 input-text"
+                placeholder="Номер авто"
+                type="text"
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="Рубль"
+          class="main-image"
+          src="./public/images/Ruble.svg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <b class="upper-text p-0 ">
+                Стоимость
+              </b>
+            </div>
+            <div class="col-12 p-0">
+              <b class="under-text p-0">
+                1 шт., Полный, 35.00 ₽
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="календарь"
+          class="main-image"
+          src="data:image/jpeg;base64,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"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <b class="upper-text p-0">Дата покупки</b>
+            </div>
+            <span
+              class="col-12 p-0 under-text"
+              id="currentDate"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="часы"
+          class="main-image"
+          src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAADpJJREFUeJztXNlyG9cR9Zvf8jP5gvxBvsB/4Le85Q/8ZlUlVY4rllzyIokmRZESKVEkJVmOFi4AgQEwmH1fMdi5aLHS6dMsJlbCaB2QlApddYsASM69c6a77+nl4pNPpjKVqUxlKlOZylSmUobcuL46+P7izJ9Wbt0jQ/cpiXs0M7M4N391eeu013bmZPHmOiXFgJq6TVk6EMDw03USGbrmUZ4NyTQC8r1MwGw2TIrCguo1jSwzJAB92vdxYnL15h26de8Btd2InDCVcf/BJoVJQZ4fUqVaI8t2KcsLyjtdaqkauV5AYZRQWzPIMG0aDMcUxSkpjZb8DMKY4iQj3U/o+upHDGZQjEnzM6qqJuWjA3q4tUNBWtDekxdeA58xYH4QCYAADoCZliPA4rNefygAA1B8hvfNVluAtB2PrCinnbZFLSuiasv+eIDcYFNT7Zg0m4HwU/L5RutNnZK8T4Yd0KOtKgUJ37zWIisOyAg9Ul2LwXYo7OZkJyG1HJP0wJX3W826/B1+nw57FBQZOWlEGruB/mCX4rxL9ZYm2u3F+YcL5JXFlSwZHFDc3SM7YnM0PKq1TOr0xvRoc4fSzkBAVA1bAGx7NvmdVAAEIACxaRtUURvk5Qkppkad3aG8xt8C0O2WIp9vNmqktk3WWot02yPbZ032YzK9iOy4Q2Ex/LCAdMKceuOn9GhboY1qk6J8IIDZXiygNdnUVN0hzWSw2HdBI6+t3qXL1296b3L9b67MfuXx5uN2+qRHGcXDPSqKHqVpLiYOX2mYLpu+T6YTyjyGG38YIMJMYa7QNj/pUtwZivYpLYMC1oZKrUV5dyRAXvzhpy/KmNNMOmSzn3TYFzquLz7SDxL+GcsDksEP1Q6yswvi7PwNBQuFj3ODVMaO0qanL0ip1NpyAwB2bvFWNqk1ALSk0yNF1cmPM7K8Q+3zwozahisPUGOtvLX+89kCst4OZYEwU/g3AIlF65bPNGWbDp6R0raCE1s0fCr8IAZAwzqwHjxQ+MbteovcqHM2QIyyETlBQRZzO/A5gIen3tAcpik9ynsHp7ZQbCDwfXArLvtKDKwN6wR1gk8+rbWJXJ5fUVSDtc+MxGS3d5ritPvM8+qqRTtN49SfctbbZfW32SfrlPVG1NJs8cHVuioPe/3nf5zeGv24z5uDRXE2kFFvmuKot2oqrdx7/N4Lu3rr/lIZ65xdukMBu5d7jysCHlhAlvd4wwklkiljjrcW2+8QtM+PCjYFDss4ysAoy7dstXhXzcZkJcz9OnulXBMR0OOtmvhDbDg19oX9wYhJuHmyIAI4gAWt21F0dtIhbdd06o2eD8q4ftDt0eDZc1pcW1f8giMLkyOTICzlJjscrSB5ETP1wWhxOBiyFoaDf+plXP+1gg0DPi9MeuxPXPZ9ubw23YwWl++WcpNep6CaYVI6GtMRgPisjGvPLix5oDK2EwjZ9pkzAsCNVkjL92uT10TQAuxiiGGjrKAw5aeoW2Qk5ZgZRLcTckMOxzyOJNyAd/mYaVJ5cW3ee0pKQ6Mk7ZLP1/ccn6oVhfKsN1kAEV1g68cASfWilBptQ2LZMuc5DkAvHJc6BwD0eBc2NJMsjscdO6Aux8ygOWXO85IgLIP6IwkKcgruF/FTLHue4wBU9fLDsKK/TxrvyB7fRxynYs6I0cueR8T0EuF2SBNFTAFABY4C9bLnOg5A3SrHB/5WHm8plLECAECXY+h6vSE79K9Ea2XP9YnOTtdGgB7nDKQhUcakgvM2UvphwAC6/zHhYDCRubAJamZApmnTs2cvthCKIvFx7WY5G6LI8vqDw7oFM/mGZlHLOAzTKop2YgAa1mSSo+e/vfQ5QFRVjSzLkXgeVnVj9Zfy5kNcC18nuTvWPokp3XRizhYAOhFrhQ8APQaQeaf3al97fWldyQqmPRwdraw/fKu1+UzY87ygJMmoyZuKgV25zLJAmPUlhoTPQx0D2uilkzEpyHEAuv7/pxiqHwsntdyENIu11UnJCN6ckqh2SjpHI+CDoGRumFBU7JZzfzdurgl4SL3nveEheOwHz50792kpExwjKqp2sUdmYJPtOuz/fAqC/w0R55bW5uyUQ8gs55g2E1qi6h5zRp+cZPTGAFyav614nscAhqKB4LYNI6CFMkqmG9t1yanBF+HJYDOBL3zvC79CjgNQ017e7YN8JG7k/naF2j5rK9MqjSlI3t0VEP387Yi9bfNcPHYaqgQIbtKnStN6//tElQuJSWR4od4oH5rhZFPjLwPIPC1wKe8cuoxLlxY/S9NdKRls7rRon0kHCkwGO36XCX6zjfKBQzMLq1++zZxBEFCapuL/0qIvxSjVKSH+xsUAHNQaqXKXN5OFlTsnDiC0CyDlOZNfLWI3UrA1RFLBq7ab1OEoAiYcJu/mmxcWFrxarSaRFSKsFkcmQacEP496K4ozrheRDvpSxkVfI4cAOgwgh44u3xADaRoc+LOGBQHHr35Bnf7o0CJCXlMeEeouc9duzb3rnPPz80ocx1JTgbVt1FVSeM73vhnUWgOOPo6APIka63EABqxdMbsPXQ+p0bDFH8PcNP69HZVwoyyapkmMj+s2WNuhLD/yBvPOF5y9uryFxCPqq6i1okcFvqGMxb5KjgNwb/cpPXq4JU1HRWdMSqMtGeWF5YWvypo3iji25x0dISR6beDrL8xc//GdLwgAoXXInR01+ZTiWF8jxwFY22lSvzemkOmM1nYpmkDbhqqqAp7huOLrsWFeWrj97olW9K6g4QdNPGidgDaiTaPENR8rTjokI+xQRWWt746ozb5PD9ix88NzswEtrP48kV5BwzjcLOEe6kybQGVQUnjnC6LlAq1jqPRDC+EL0ShU4pqPlQZHE9sti6LeHmnI2aGmy2Q+He5PdG5EI/CByG+arOlO3KPN5nukt5ZX7on/w4ApA0BF9ycO4LlzS58+rhukuhnZSY/Bc2lu+c4777BvKmgPQcQFGgPwdC+jxbW3i6tfktn5JQWghVEmGggTRohT4ppfKTBlvzPZqOe3EkWIpQ8zQLC0phnSN5cX3oqQvyQXvrvyZ4AH4I5COQD45dcXfl/ius+MBOzvcY+4V/hAgHju3He/e6+LmpYn1Svk5OAbYMLfzSxO3JxOQ5BUBYnGgPaVsmGigCTJBN4BUY1Dh9XqvffwC2dUZmevriGtDxINRYH2lZKyQxMO+l5QAwGQ6Dw4Cz0vZQsoTJYdxvuwNmhgKQA2dXaqXiKVuM2dhgCI7tMS1nympN3WJSstBSzbk2b1WruEEPHGyl1ChxOqcUjlA1Ckkn7ZbH5UICIb7XG0BRqDnTgfPiXUgkq5+O37j6ja0KXLFG27qJGgxaOUi58BAd9EQQkgIp3VHe6WGzDsviAFRXWAh05Tade1PpCm7TeQbPR8APCq1RqND54dbFRq5dZ8vv9pcQm7L4pLSGICxCQfEoh2aZOcklhxlx7uqNLhDxOuKi2Jh69cu1Vet9bFy4s/ok0WnQnd0RPpujfsiLaqrQ9eCxtWSGZUSIc/iDQ4IKhM6RPhrAcARBEa/YBorEw5zKo1PlxKU+z9mm0oOoXdXarVFOr3hxKFoLA0kQnFhBk81F/REwgNRDF7IpOdgKh8H022JJzhg/YhG4MC2sQmdKKxNFemxZ5wJXCmME1469c/OBCP2lRQwDc8R/ob1zfalO3RZP066Eu95UjttFJvss/AeQz2H8NnBxOduERxk6E0SuG8SJinpLu2dKgm4wmDB8GGgkytn3SkT0azcFgwpQbvzvO3z/553atL65IsTbuHvY6wJIx2OCKnc0IRFlI9WABO/aBvBf0rGnPDLbWESv6EJeyM6fFOW8DDPRy5opp1wieXFLTFJjkvYsC+xCTVdFgr8zN9Rhc+D1216DJDcgRHb7EhNtsT6kp9ndjMmXTmTKYXUpR3SeEwKMy6ZLghzd1YOzM+8cbaXTk7DJ/XHezJQW9klpBpwlGNU1vYxZn5uZaN4/apHLtPsw7t1JrSxYDDh/Gku97fQNJeQVv1HXYzDg33dmmjUqViMJQOrs1Kk+bm1043mho/e+HBnHHaJ+FwCB0MaAEBeGiVTbunxxNt9m2aY5GfxgIg6Facd6ip6dLBNRifEebQZJNF5wLOnQ1H+1JDxsBJIPTboc5wkicj0X2vGqaMIInJi0KKi5waepsAqi/HYc/IcdcjWb65IvXjh4+2pAx6BKT0FNqHh55xhAAx9aTWcHlmec4LO3IAEuBB04pBnzarFao2Fel4xab39YWLn01qDe8t4If93SdUUVTeVEypLyC7gSRlf7wvvvHwbHE5/vFv385+Hnb2pOyATlpcH64jZKIPbdtpajTYe0oRA4dNr4w5Jy7oYgWdAZi1ZlsCdAwkK0EfUJxCTI2WtDQdUIe52fkf5r94kxLiX/7+/R9urD4gzc2pGL/wkt4T0r2OnMIELdk9+DXLiiGTfF2YAR4kCL9T8mmqiQvybE7al6eOnRraYOBcGpsyvnBCZ03Z55vFVznVmNjiFABOP+GIAb534RBk/9/feQDzR2UQrzFARfDZkdaN9g/4AWmicThcjWgDWWU7HtKla6sncxJzEgLT8dic2mzCMCuYF27YZjDafPO97p50XMGsAQbGEdkFSAARr2Gi+Bzvj46Z4TOAjXHk88D3hvvPDtCagYjpr+cv//G0MShFQLChGegslS/bwfcYcPxc2VYojjoUsVahiRLHrtCJejTwHgcB5TgWurN+M2wGEp2rOO+WdHnHNzQJLxGmnfb9TkyuzF37BTszAGw2dBoO9klHkeo3IFn4Qh5EC/gaFZwM5fcYeA2gjz4DePifhKMKRVNp8dYyLSzf/njB+2+5frdC2xprXff5wLAT9nEph1h9Nskem2gmP92goFrDomrdYHI+ktFQXfk9/vbK7FL5BwM/dDn/7czn6/c22NfFMu4/qNLt9Yd0kXfq017bVKYylalMZSpTmcpHIv8CCElUWNCvXXsAAAAASUVORK5CYII="
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <b class="col-12 p-0 upper-text">Время покупки</b>
+            <span
+              class="col-12 p-0 under-text"
+              id="currentTime"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</main>
+
+<footer class="main-footer container">
+  <button
+    class="start-button"
+    id="start-button"
+  >закрыть
+  </button>
+</footer>
+<script src="./src/scripts/timer.js"></script>
+<script src="./src/scripts/date.js"></script>
+<script src="./src/scripts/calculating_ticket_number.js"></script>
+<script src="./src/scripts/time.js"></script>
+</body>
+</html>
