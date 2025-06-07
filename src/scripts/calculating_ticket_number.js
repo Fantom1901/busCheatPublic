@@ -1,28 +1,48 @@
-function calculateDaysDifference(firstTimestamp, secondTimestamp) {
-  const baseTimestamp = Math.floor(secondTimestamp);
-  const timeDifferenceSeconds = firstTimestamp - baseTimestamp;
-  const daysDifference = Math.floor(timeDifferenceSeconds / 86400);
-  return daysDifference;
+import {
+  START_TICKET_NUMBER,
+  MULTIPLIER_PER_DAY,
+  BASE_DATE_TIMESTAMP
+} from '../config.js';
+/**
+ * Вычисляет количество полных дней между двумя временными метками (в секундах).
+ * @param {number} currentTimestamp - Текущая временная метка в секундах.
+ * @param {number} baseTimestamp - Базовая временная метка в секундах.
+ * @returns {number} Количество полных дней между датами.
+ */
+function getDaysDifference(currentTimestamp, baseTimestamp) {
+  const cleanCurrentTimestamp = Math.floor(currentTimestamp);
+  const cleanBaseTimestamp = Math.floor(baseTimestamp);
+  const differenceInSeconds = cleanCurrentTimestamp - cleanBaseTimestamp;
+  const SECONDS_IN_DAY = 86400; // 60 секунд * 60 минут * 24 часа
+  return Math.floor(differenceInSeconds / SECONDS_IN_DAY);
 }
 
-const startTicketNumber = 1009065676;
-const dateNow = Date.now() / 1000;
-const baseDate = 1742940000;
-
-const finalCalculatedCode = calculateDaysDifference(dateNow, baseDate) * 379281 + startTicketNumber;
-
+/**
+ * Форматирует число, добавляя пробелы в качестве разделителей тысяч.
+ * @param {number} number - Число для форматирования.
+ * @returns {string} Отформатированное число в виде строки.
+ */
 function formatNumberWithSpaces(number) {
-  const numStr = Math.floor(number).toString();
-  let formattedNumber = "";
-
-  for (let i = numStr.length - 1; i >= 0; i--) {
-    formattedNumber = numStr[i] + formattedNumber;
-    if ((numStr.length - 1 - i) % 3 === 2 && i !== 0) {
-      formattedNumber = " " + formattedNumber;
-    }
-  }
-  return formattedNumber;
+  // Используем Intl.NumberFormat для международного форматирования.
+  return new Intl.NumberFormat('ru-RU').format(number);
 }
 
-const codeDisplay = document.getElementById("codeDisplay");
-codeDisplay.textContent = formatNumberWithSpaces(finalCalculatedCode);
+// --- Основная логика расчета номера билета ---
+
+// Получаем текущее время в секундах
+const dateNowSeconds = Date.now() / 1000;
+
+// Вычисляем количество дней, прошедших с базовой даты
+const daysPassed = getDaysDifference(dateNowSeconds, BASE_DATE_TIMESTAMP);
+
+// Вычисляем итоговый номер билета, используя импортированные константы
+const finalTicketNumber = daysPassed * MULTIPLIER_PER_DAY + START_TICKET_NUMBER;
+
+// Получаем элемент для отображения кода и обновляем его
+const codeDisplayElement = document.getElementById("codeDisplay");
+if (codeDisplayElement) { // Проверяем, существует ли элемент
+  codeDisplayElement.textContent = formatNumberWithSpaces(finalTicketNumber);
+} else {
+  // Упрощаем сообщение об ошибке, без шаблонной строки, чтобы исключить проблему с ней.
+  console.error("Элемент с ID 'codeDisplay' не найден.");
+}
