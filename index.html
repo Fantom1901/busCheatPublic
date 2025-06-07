@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport"
+  >
+  <meta
+    content="ie=edge"
+    http-equiv="X-UA-Compatible"
+  >
+  <link
+    href="node_modules/bootstrap/dist/css/bootstrap.css"
+    rel="stylesheet"
+  >
+  <link
+    href="./src/styles/index.css"
+    rel="stylesheet"
+  >
+  <title>Городской транспорт</title>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="main-header-timer col-12 d-flex align-content-center justify-content-center">
+          <span
+            class="timer-display"
+            id="timer-display"
+          >Нажмите "закрыть" для запуска</span>
+      </div>
+      <div class="main-header-number col-5">
+        <div class="container-fluid d-flex justify-content-center align-content-center p-0">
+          <div class="row">
+            <div class="col-auto p-0 d-flex justify-content-around align-content-center">
+              <div class="image-container">
+                <img
+                  alt="Билет"
+                  class="main-image"
+                  src="./public/images/ticket.jpg"
+                >
+              </div>
+            </div>
+            <div class="number-text-container col-auto d-flex align-content-center">
+              <b
+                class="p-0 number-text"
+                id="codeDisplay"
+              ></b>
+            </div>
+            <div class="container-fluid m-0 red-line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main-header-control col-5">
+        <div class="container-fluid">
+          <div class="row d-flex align-content-center justify-content-center">
+            <div class="col-auto p-0">
+              <div class="image-container">
+                <img
+                  alt="Человек в форме"
+                  class="main-image"
+                  src="./public/images/person.jpg"
+                >
+              </div>
+            </div>
+            <div class="col-auto d-flex align-content-center">
+              <b class="control-text">
+                Контроль
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="col-12 m-0">
+</header>
+
+<main class="container content-wrapper">
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="Человек в форме"
+          class="main-image"
+          src="./public/images/person.jpg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container">
+          <div class="row">
+            <b class="col-12 p-0 upper-text">Перевозчик</b>
+            <input
+              class="col-12 p-0 input-text"
+              value="КТАТП-5"
+              placeholder="КПАТП-5"
+              type="text"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="Автобус"
+          class="main-image"
+          src="./public/images/auto.jpg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <label class="p-0">
+              <select
+                class="col-12 select-text"
+                id="route"
+                name="route"
+              >
+                <option value="">Выберите маршрут</option>
+                <option value="sol-zor">мкрн. Солнечный - мкрн. Тихие зори</option>
+                <option value="zor-sol">мкрн. Тихие зори - мкрн. Солнечный</option>
+                <option value="mol-sol">Молодежная - Солнечный</option>
+                <option value="sol-mol">Солнечный - Молодежная</option>
+                <option value="akdbiat-LDK">Академия биатлона - ЛДК</option>
+                <option value="LDK-akdbiat">ЛДК - Академия биатлона</option>
+              </select>
+              <input
+                class="col-12 input-text"
+                placeholder="Номер авто"
+                type="text"
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="Рубль"
+          class="main-image"
+          src="./public/images/Ruble.svg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <b class="upper-text p-0 ">
+                Стоимость
+              </b>
+            </div>
+            <div class="col-12 p-0">
+              <b class="under-text p-0">
+                1 шт., Полный, 35.00 ₽
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="календарь"
+          class="main-image"
+          src="./public/images/calen.jpg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <b class="upper-text p-0">Дата покупки</b>
+            </div>
+            <span
+              class="col-12 p-0 under-text"
+              id="currentDate"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-2 p-0 image-container d-flex justify-content-center align-content-center">
+        <img
+          alt="часы"
+          class="main-image"
+          src="./public/images/clock.jpg"
+        >
+      </div>
+      <div class="col-10 p-0">
+        <div class="container-fluid">
+          <div class="row">
+            <b class="col-12 p-0 upper-text">Время покупки</b>
+            <span
+              class="col-12 p-0 under-text"
+              id="currentTime"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</main>
+
+<footer class="main-footer container">
+  <button
+    class="start-button"
+    id="start-button"
+  >закрыть
+  </button>
+</footer>
+<script src="./src/scripts/timer.js"></script>
+<script src="./src/scripts/date.js"></script>
+<script src="./src/scripts/calculating_ticket_number.js"></script>
+<script src="./src/scripts/time.js"></script>
+</body>
+</html>
