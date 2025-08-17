@@ -1,6 +1,6 @@
-export const START_TICKET_NUMBER = 1150880554;
+export const START_TICKET_NUMBER = 1184053672;
 
-export const BASE_DATE_STRING = '2025-07-20';
+export const BASE_DATE_STRING = '2025-08-17';
 
 export const MULTIPLIER_PER_DAY = 379281;
 
